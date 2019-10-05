@@ -1,4 +1,5 @@
 
+import java.util.Objects;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 
@@ -259,12 +260,18 @@ public class Registration extends javax.swing.JFrame {
         String usrname = t4.getText();
        String pwd1=p1.getText();
        String pwd2 =p2.getText();
-       if(pwd1.equals(pwd2))
+     /*  if(pwd1.equals(pwd2))
    JOptionPane.showMessageDialog(null,"Thank You.\n Your ID is created.");
        else
    JOptionPane.showMessageDialog(null,"Error! \n Check Your Password again.");
-    
-        
+    */
+        if(Objects.equals(pwd1,pwd2))
+        {
+            JOptionPane.showMessageDialog(null,"Thank You.\n Your ID is created.");
+   
+        }
+         else
+   JOptionPane.showMessageDialog(null,"Error! \n Check Your Password again.");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void t3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t3ActionPerformed
